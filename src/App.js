@@ -1,18 +1,19 @@
-function App() {
-  const greeting = "hi!!!!";
-  const dom = <h1 className="foo">{greeting}</h1>;
+import React from "react";
+
+const App = () => {
   return (
-    <>
-      {dom}
-      <label htmlFor="bar">bar</label>
-      <input
-        type="text"
-        onChange={() => {
-          console.log("clicked");
-        }}
-      />
-    </>
+    <div>
+      Hi!
+      <Cat />
+      <Cat />
+      <Cat />
+      <Cat />
+    </div>
   );
-}
+};
+
+const Cat = () => {
+  return <div>meow</div>;
+};
 
 export default App;
