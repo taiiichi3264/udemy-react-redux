@@ -1,8 +1,17 @@
 function App() {
+  const greeting = "hi!!!!";
+  const dom = <h1 className="foo">{greeting}</h1>;
   return (
-    <div>
-      <p>hello world</p>
-    </div>
+    <>
+      {dom}
+      <label htmlFor="bar">bar</label>
+      <input
+        type="text"
+        onChange={() => {
+          console.log("clicked");
+        }}
+      />
+    </>
   );
 }
 
